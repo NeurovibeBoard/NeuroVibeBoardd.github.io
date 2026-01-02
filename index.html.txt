@@ -1,0 +1,9 @@
+<section id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">Contact Me</h2>
+  <p>Email me at <a href="mailto:you@example.com">you@example.com</a></p>
+  <p>Or call me at:</p>
+  <ul>
+    <li><a href="tel:6005651167">6005651167</a></li>
+    <li><a href="tel:9596729958">9596729958</a></li>
+  </ul>
+</section>
