@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neurovibe — Elevate your mind</title>
+  <meta name="description" content="Neurovibe helps you elevate focus, clarity, and flow with science-backed experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#121824;
+      --text:#eaf1ff;
+      --muted:#a6b3cc;
+      --accent:#6ee7ff;
+      --accent2:#a78bfa;
+      --glow:0 0 40px rgba(102, 217, 255, .25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 10% -10%, #122033 0%, #0b0f14 40%), radial-gradient(900px 500px at 90% 110%, #181b2a 0%, #0b0f14 55%); color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;}
+    a{color:var(--accent); text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:linear-gradient(to bottom, rgba(11,15,20,.85), rgba(11,15,20,.45)); backdrop-filter:saturate(1.2) blur(10px); border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 130deg, var(--accent), var(--accent2), #7cf5d2, var(--accent)); box-shadow:var(--glow)}
+    .navlinks{display:flex;gap:18px}
+    .navlinks a{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid rgba(255,255,255,.12); border-radius:12px; color:var(--text); background:rgba(255,255,255,.04); transition:.2s; backdrop-filter:blur(6px)}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 6px 24px rgba(0,0,0,.35)}
+    .btn.primary{border-color:transparent; background:linear-gradient(135deg, var(--accent), var(--accent2)); color:#051018; font-weight:700}
+    .hero{padding:76px 0 40px; text-align:center}
+    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); color:var(--muted); font-size:14px}
+    h1{font-size:52px; line-height:1.02; margin:16px auto 14px; max-width:900px; letter-spacing:-.02em}
+    .gradient-text{background:linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .sub{max-width:760px;margin:0 auto 26px;color:var(--muted);font-size:18px}
+    .cta-row{display:flex;gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+    .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:30px}
+    .card{padding:18px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:16px; min-height:170px; position:relative; overflow:hidden}
+    .card:before{content:""; position:absolute; inset:-60% auto auto -60%; width:200px; height:200px; background:radial-gradient(120px 120px at center, rgba(110,231,255,.2), transparent); transform:rotate(25deg)}
+    .card h3{margin:4px 0 8px; font-size:20px}
+    .card p{color:var(--muted)}
+    .section{padding:68px 0}
+    .section h2{font-size:28px; margin:0 0 10px}
+    .stack{display:grid; gap:12px; grid-template-columns:repeat(2, 1fr)}
+    .feature{padding:18px; border:1px solid rgba(255,255,255,.08); border-radius:16px; background:rgba(255,255,255,.04)}
+    .feature h4{margin:0 0 6px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(167,139,250,.2); color:#d9d2ff; font-size:12px; border:1px solid rgba(167,139,250,.35)}
+    footer{padding:30px 0; border-top:1px solid rgba(255,255,255,.08); color:var(--muted)}
+    .contact{display:grid; grid-template-columns:1.2fr .8fr; gap:20px}
+    input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); outline:none}
+    .note{font-size:13px;color:#95a2ba}
+    .marquee{margin:40px auto 0; overflow:hidden; border:1px solid rgba(255,255,255,.08); border-radius:12px; background:rgba(255,255,255,.03)}
+    .track{display:flex; gap:28px; padding:14px 18px; animation:scroll 28s linear infinite}
+    .pill{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); color:#cbd6ea; font-size:13px; white-space:nowrap}
+    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @media (max-width:900px){ .cards{grid-template-columns:1fr 1fr} .stack{grid-template-columns:1fr} .contact{grid-template-columns:1fr} h1{font-size:38px}}
+    @media (max-width:560px){ .cards{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo"></div>
+          <span>Neurovibe</span>
+        </div>
+        <div class="navlinks">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="btn primary" href="#try">Try demo</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="eyebrow">Science meets flow</span>
+      <h1>Elevate focus and clarity with <span class="gradient-text">Neurovibe</span></h1>
+      <p class="sub">Real-time soundscapes and guided micro-practices tuned to your state. Simple, fast, and designed to help you get in the zone.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#features">Explore features</a>
+        <a class="btn" href="#contact">Get early access</a>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <span class="badge">Adaptive</span>
+          <h3>Dynamic audio</h3>
+          <p>Generative sound layers that adapt to your session, from deep work to recovery and sleep.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Guided</span>
+          <h3>Micro-practices</h3>
+          <p>Two- to five-minute resets for breathing, posture, and attention—no fluff, just effect.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Minimal</span>
+          <h3>Instant start</h3>
+          <p>Zero sign-up required. Pick a mode and go. Works on mobile and desktop.</p>
+        </div>
+      </div>
+
+      <div class="marquee">
+        <div class="track">
+          <div class="pill">Deep work</div>
+          <div class="pill">Focus boost</div>
+          <div class="pill">Calm reset</div>
+          <div class="pill">Recovery</div>
+          <div class="pill">Flow state</div>
+          <div class="pill">Sleep prep</div>
+          <div class="pill">Breath pacing</div>
+          <div class="pill">Minimal UI</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section container">
+      <h2>Features tailored for your mind</h2>
+      <div class="stack">
+        <div class="feature">
+          <h4>Modes that matter</h4>
+          <p>Choose Focus, Calm, or Recovery. Each comes with curated audio palettes and timers.</p>
+        </div>
+        <div class="feature">
+          <h4>Session timeline</h4>
+          <p>See your session segments at a glance, with gentle prompts to keep you aligned.</p>
+        </div>
+        <div class="feature">
+          <h4>Offline friendly</h4>
+          <p>Works with cached assets so you’re not blocked when the network isn’t cooperating.</p>
+        </div>
+        <div class="feature">
+          <h4>Themeable</h4>
+          <p>Toggle accents and density; Neurovibe keeps the interface minimal and accessible.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About Neurovibe</h2>
+      <p>Neurovibe is a lightweight experience designed to help people enter and sustain a flow state using sound, rhythm, and simple prompts. Built with care for low distraction and fast performance.</p>
+      <div class="grid-3" style="margin-top:16px">
+        <div class="feature"><h4>Fast</h4><p>Under 50KB CSS, minimal JS, instant load.</p></div>
+        <div class="feature"><h4>Accessible</h4><p>High contrast, keyboard friendly, ARIA tags.</p></div>
+        <div class="feature"><h4>Open</h4><p>Easy to fork, tweak, and deploy to GitHub Pages.</p></div>
+      </div>
+    </section>
+
+    <section id="try" class="section container">
+      <h2>Try a mini session</h2>
+      <p class="sub">Press play to start a 60‑second focus tone with gentle fade in/out. Use headphones for best results.</p>
+      <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap">
+        <button class="btn primary" id="playBtn">Play tone</button>
+        <button class="btn" id="stopBtn">Stop</button>
+        <span class="note" id="status">Ready</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Get in touch</h2>
+      <div class="contact">
+        <form>
+          <input type="text" placeholder="Your name" aria-label="Name" />
+          <input type="email" placeholder="Email" aria-label="Email" />
+          <textarea rows="4" placeholder="Message" aria-label="Message"></textarea>
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+        <div>
+          <p><strong>Team:</strong> Neurovibe</p>
+          <p><strong>Email:</strong> hello@neurovibe.example</p>
+          <p class="note">Replace with your real contact details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Neurovibe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Minimal tone generator for demo (Web Audio API)
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    let osc, gain, timeoutId;
+    const status = document.getElementById('status');
+    function startTone() {
+      if (osc) return;
+      osc = ctx.createOscillator();
+      gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = 432; // gentle focus tone
+      gain.gain.value = 0.0001;
+      osc.connect(gain).connect(ctx.destination);
+      osc.start();
+      // Fade in
+      gain.gain.exponentialRampToValueAtTime(0.08, ctx.currentTime + 1.2);
+      status.textContent = 'Playing…';
+      // Auto stop after 60s with fade out
+      timeoutId = setTimeout(() => stopTone(true), 60000);
+    }
+    function stopTone(auto=false) {
+      if (!osc) return;
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.8);
+      setTimeout(() => {
+        osc.stop();
+        osc.disconnect();
+        gain.disconnect();
+        osc = null;
+        gain = null;
+        status.textContent = auto ? 'Finished' : 'Stopped';
+        clearTimeout(timeoutId);
+      }, 850);
+    }
+    document.getElementById('playBtn').addEventListener('click', () => {
+      if (ctx.state === 'suspended') ctx.resume();
+      startTone();
+    });
+    document.getElementById('stopBtn').addEventListener('click', () => stopTone());
+  </script>
+</body>
+</html>
